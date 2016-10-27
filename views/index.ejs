@@ -1,0 +1,20 @@
+<html>
+  <head></head>
+  <body>
+    <%= helloString %>  <!-- Calling the helloString we passed when rendering index in testRoute -->
+    <ul>
+
+    <!-- Calling the helloArray we passed when rendering index in testRoute and
+    looping through it, creating an unordered list.
+    -->
+    <% for(i=0; i < helloArray.length; i++){ %>
+
+        <li><%= helloArray[i] %></li>
+
+
+
+    <%}%>
+  </ul>
+  </body>
+
+</html>
