@@ -1,5 +1,5 @@
 // DISCLAIMER!!!!
-// This is a test, it will show you how to render a page and also how to pass data to said page.
+// This is a test, it will show you how to render a page and also how to pass data to said page.S
 
 module.exports = function(app){// Module.exports is used to expose our route to the server
 
