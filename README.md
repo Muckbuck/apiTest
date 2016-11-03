@@ -11,8 +11,9 @@ Version 0.0.1 of the Grandisa webapp/mashup
 ### DB ###
 
 * link to mlabs: https://mlab.com/home
-* username: grandiosaBackend@gmail.com
+* username: grandiosaBackend
 * password: pizzaBackEnd347
+* Registered with: grandiosaBackend@gmail.com
 
 ### How do I get set up? ###
 
@@ -23,7 +24,7 @@ Version 0.0.1 of the Grandisa webapp/mashup
 ```
 #!javascript
 
-git clone https://muckbuck@bitbucket.org/muckbuck/gback.git
+git clone https://<YourUsername>@bitbucket.org/muckbuck/gback.git
 ```
 
 **Download nodemon**
