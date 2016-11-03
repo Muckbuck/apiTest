@@ -17,11 +17,14 @@
 
     <%}%>
   </ul>
-  <form action="/saveImg" method="POST">
-    <input type="file" name="imgName" accept="image/*">
-    <imput type="text">
-    <input type="submit">
-  </form>
+  <form action="/saveImg" method="post" enctype="multipart/form-data">
+         
+            <label for="profilepic">Profile Pic:</label>
+            <input type="file" id="profilepic" name="profilepic" />
+            <br />
+            <input type="submit" value="Create Profile" />
+        
+      </form>
   </body>
 
 </html>
