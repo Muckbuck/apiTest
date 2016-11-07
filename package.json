@@ -18,6 +18,7 @@
     "morgan": "~1.6.1",
     "multer": "^1.2.0",
     "multiparty": "^4.1.2",
+    "pretty-data": "^0.40.0",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
