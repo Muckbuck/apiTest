@@ -13,29 +13,36 @@ module.exports = function(app){
   app.post('/saveImg', urlencodedParser, function(req,res){
     var fields = [];
     var form = new formidable.IncomingForm();
-    //Call back when each file in the form is parsed.
     
+    var imgName;
+    
+    form.on('field', function (field, value) {
+        
+        var jsonFile = JSON.stringify(value);
+        var parsedJSON = JSON.parse(jsonFile);
+        imgName = parsedJSON;
+        
+    });
+    
+
     form.on('file', function (name, file) {
-        console.log(name);
-      
+        
         var jsonFile = JSON.stringify(file);
         var parsedJSON = JSON.parse(jsonFile);
         
         var path = fields['path']=parsedJSON.path;
-        var name = fields['name']=parsedJSON.name;
-        console.log(fields.path);       
-        console.log(parsedJSON); 
-
+        //var fileName = fields['name']=parsedJSON.name;
+          
         var model = new imgModel();
         var binaryImg =  fs.readFileSync(path);
-        console.log(binaryImg)
+        
         model.img.data = binaryImg;
-        model.name = name;
-        console.log(binaryImg);
+        model.name = imgName;
+        
         model.img.contentType = 'image/*';
-        imgModel.findOne({'name': req.body.name}, function(err, doc){
-          if(err)
-            throw err
+        imgModel.findOne({'name': imgName}, function(err, doc){
+          if(err) throw err
+          else if(doc) throw err
           else
             model.save(function(err){
               if (err)
