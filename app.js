@@ -11,6 +11,7 @@ require('./routes/img.js')(app);
 require('./routes/api/img.js')(app);
 //require('./routes/api/paragraph.js')(app);
 require('./routes/api/product.js')(app);
+
 app.use('/assets/', express.static(__dirname + '/public'));
 
 var port = 3000;

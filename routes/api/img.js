@@ -54,7 +54,7 @@ module.exports = function(app){
     
   });
   //Post router for saving images to the database
-  app.post('/api/saveImg', urlencodedParser, function(req,res){
+  app.post('/api/saveImg', function(req,res){
     var fields = [];
     var form = new formidable.IncomingForm();
     
