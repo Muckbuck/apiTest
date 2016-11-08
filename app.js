@@ -16,4 +16,4 @@ app.use('/assets/', express.static(__dirname + '/public'));
 
 var port = 3000;
 
-app.listen(port);//express listening on port 3000
+app.listen(process.env.PORT || port);//express listening on port 3000
