@@ -6,10 +6,19 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var formidable = require('formidable');
 var util = require('util');
 
-
-  
 module.exports = function(app){
-  //Get router for retrieving images from the database
+ /**
+ * @api {get} /api/img? Request image
+ * @apiName getImg
+ *
+ * @apiParam {String} name Name of the image.
+ * @apiParam {String} buffer Option for getting a rendered image.
+ * @apiParam {String} read Removing binary data for readability.
+ * @apiSuccess {String} _id Image Id.
+ * @apiSuccess {String} name  Name of the image.
+ * @apiSuccess {String} contentType  File extension.
+ * @apiSuccess {Buffer} data The binary representation.
+ */
   app.get('/api/img', function(req, res){
     var name = req.query.name;
     var imgBuffer = req.query.buffer;
@@ -53,6 +62,18 @@ module.exports = function(app){
     }
     
   });
+  /**
+ * @api {POST} /api/img? Request image
+ * @apiName postImg
+ *
+ * @apiParam {String} name Name of the image.
+ * @apiParam {String} buffer Option for getting a rendered image.
+ * @apiParam {String} read Removing binary data for readability.
+ * @apiSuccess {String} _id Image Id.
+ * @apiSuccess {String} name  Name of the image.
+ * @apiSuccess {String} contentType  File extension.
+ * @apiSuccess {Buffer} data The binary representation.
+ */
   //Post router for saving images to the database
   app.post('/api/saveImg', function(req,res){
     var fields = [];
