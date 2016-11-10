@@ -1,19 +1,44 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   </head>
   <body>
 
-  </ul>
-  <form action="/api/saveImg" method="post" enctype="multipart/form-data">
-            <label for="profilepic">Image name</label>
-            <input type="text" id="name" name="name" placeholder="Image name" />
-            <br />
-            <label for="profilepic">Image</label>
-            <input type="file" id="img" name="img" />
-            <br />
-            <input type="submit" value="Send img" />
-        
+  
+  
+      <h1>Image post</h1>
+      <form class="form-inline" action="/api/saveImg" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          
+          <input type="text" id="name" name="name" placeholder="Title" />
+        </div><br>
+        <div class="form-group">
+          
+          <input type="file" id="img" name="img" />
+        </div><br><br>
+        <button type="submit" class="btn btn-default">Send image</button>
+      </form>
+
+      <h1>Paragraph post</h1>
+      <form class="form-inline" action="/api/saveParagraph" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          
+          <input type="text" id="title" name="title" placeholder="Title" />
+        </div><br>
+        <div class="form-group">
+          
+          <input type="text" id="content" name="content" placeholder="content" />
+        </div><br>
+        <div class="form-group">
+          
+          <input type="text" id="name" name="name" placeholder="Image name" />
+        </div><br>
+        <div class="form-group">
+          
+          <input type="file" id="img" name="img" />
+        </div><br><br>
+        <button type="submit" class="btn btn-default">Send paragraph</button>
       </form>
   </body>
 

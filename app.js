@@ -9,8 +9,8 @@ app.set('view engine', 'ejs')// sets the view engine
 require('./routes/testRoute.js')(app);
 require('./routes/img.js')(app);
 require('./routes/api/img.js')(app);
-//require('./routes/api/paragraph.js')(app);
-require('./routes/api/product.js')(app);
+require('./routes/api/paragraph.js')(app);
+
 
 app.use('/assets/', express.static(__dirname + '/public'));
 

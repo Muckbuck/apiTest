@@ -4,7 +4,7 @@ var fs = require('fs');
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var formidable = require('formidable');
-var util = require('util');
+
 
 module.exports = function(app){
  /**
@@ -20,10 +20,11 @@ module.exports = function(app){
  * @apiSuccess {Buffer} data The binary representation.
  */
   app.get('/api/img', function(req, res){
-    var name = req.query.name;
+    var imgName = req.query.name;
     var imgBuffer = req.query.buffer;
     var readable = req.query.read;
-    if(!name){
+    
+    if(!imgName){
       imgModel.find({}, function(err, docs){
         var stringDocs = JSON.stringify(docs);
         var parsedDocs = JSON.parse(stringDocs);
@@ -37,7 +38,7 @@ module.exports = function(app){
         
       });
     }else{
-      imgModel.findOne({'name': name}, function(err, docs){
+      imgModel.findOne({'name': imgName}, function(err, docs){
         if (err)  throw err
         var stringDocs = JSON.stringify(docs);
         var parsedDocs = JSON.parse(stringDocs);
@@ -78,7 +79,6 @@ module.exports = function(app){
   app.post('/api/saveImg', function(req,res){
     var fields = [];
     var form = new formidable.IncomingForm();
-    
     var imgName;
     
     form.on('field', function (field, value) {
@@ -86,6 +86,7 @@ module.exports = function(app){
         var jsonFile = JSON.stringify(value);
         var parsedJSON = JSON.parse(jsonFile);
         imgName = parsedJSON;
+        
         
     });
 
