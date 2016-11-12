@@ -40,6 +40,18 @@
         </div><br><br>
         <button type="submit" class="btn btn-default">Send paragraph</button>
       </form>
+
+      
+        <%= grandiosaFeed.data[0].message %>
+        <table>
+          <% for(var i=0; i < grandiosaFeed.length; i++) { %>
+            <tr>
+              <td><%= grandiosaFeed.data[i] %></td>
+              
+            </tr>
+          <% } %>
+        </table>
+      
   </body>
 
 </html>

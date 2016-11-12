@@ -6,10 +6,11 @@ db.connect('mongodb://admin:admin123@ds139277.mlab.com:39277/webapp');
 app.set('view engine', 'ejs')// sets the view engine
 
 //Initiating all the routes
-require('./routes/testRoute.js')(app);
-require('./routes/img.js')(app);
+require('./routes/index.js')(app);
+
 require('./routes/api/img.js')(app);
 require('./routes/api/paragraph.js')(app);
+
 
 
 app.use('/assets/', express.static(__dirname + '/public'));
