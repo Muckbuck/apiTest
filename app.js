@@ -10,7 +10,7 @@ var fs = require('fs');
 db.connect('mongodb://admin:admin123@ds139277.mlab.com:39277/webapp');
 app.set('view engine', 'ejs')// sets the view engine
 
-app.use(Facebook.middleware({ appId: config.appId, secret: config.appSecret }));
+app.use(Facebook.middleware({ appId: config.fbOptions.appId, secret: config.fbOptions.appSecret }));
 
 //Initiating all the routes
 require('./routes/index.js')(app);
