@@ -14,10 +14,10 @@ app.use(Facebook.middleware({ appId: config.appId, secret: config.appSecret }));
 
 //Initiating all the routes
 require('./routes/index.js')(app);
-
 require('./routes/api/img.js')(app);
 require('./routes/api/paragraph.js')(app);
 require('./routes/api/fbPosts.js')(app);
+require('./routes/api/product.js')(app);
 
 
 app.use('/assets/', express.static(__dirname + '/public'));

@@ -40,3 +40,30 @@ npm install nodemon --save
 
 nodemon app
 ```
+
+
+### A quick guide to requesting data as a client ###
+
+**Examples of different endpoints**
+
+* To get all products /api/product
+* To get a product /api/product?name=nameOfProduct
+
+* To get a paragraph /api/paragraph?title=titleOfParagraph
+
+* To get posts from facebook /api/fbposts
+* To get posts from facebook with a limit(default is 25) /api/fbposts?limit=X
+
+
+
+**How to make a request from the client**
+```
+#!javascript
+
+$.ajax({
+  url: localhost/api/{{The endpoint to which you want to send your request}},
+  dataType: json,
+  success: function(json){return json},
+  error: function(error){return error}
+});
+```

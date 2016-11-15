@@ -41,6 +41,36 @@
         <button type="submit" class="btn btn-default">Send paragraph</button>
       </form>
 
+      <h1>Product post</h1>
+      <form class="form-inline" action="/api/saveProduct" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+          <input type="text" id="productName" name="productName" placeholder="productName" />
+        </div><br>
+
+        <div class="form-group">
+          <input type="text" id="categoryName" name="categoryName" placeholder="categoryName" />
+        </div><br>
+
+        <div class="form-group">
+          <input type="text" id="description" name="description" placeholder="description" />
+        </div><br>
+
+        <div class="form-group">
+          <input type="text" id="nutritionalValues" name="nutritionalValues" placeholder="nutritionalValues" />
+        </div><br>
+
+        <div class="form-group">
+          <input type="text" id="ingredients" name="ingredients" placeholder="ingredients" />
+        </div><br>
+
+        <div class="form-group">
+          <input type="file" id="img" name="img" />
+        </div><br><br>
+
+        <button type="submit" class="btn btn-default">Send product</button>
+      </form>
+
       
        
   </body>
