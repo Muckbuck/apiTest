@@ -42,7 +42,7 @@ const options = {
  * Creating one http and one https 
  * server.
  **********************************/
-https.createServer(options, app).listen(process.env.PORT||httpsPort);
+//https.createServer(options, app).listen(process.env.PORT||httpsPort);
 http.createServer(app).listen(process.env.PORT||httpPort);
 
 
