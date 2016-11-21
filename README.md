@@ -10,21 +10,21 @@ Version 0.0.1 of the Grandisa webapp/mashup
 
 **Clone the repo**
 ```
-#!javascript
+
 
 git clone https://<YourUsername>@bitbucket.org/muckbuck/gback.git
 ```
 
 **Download nodemon**
 ```
-#!javascript
+
 
 npm install nodemon --save
 ```
 
 **Start the app by typing:** 
 ```
-#!javascript
+
 
 nodemon app
 ```
@@ -46,7 +46,7 @@ nodemon app
 
 **How to make a request from the client**
 ```
-#!javascript
+
 
 $.ajax({
   url: localhost/api/{{The endpoint to which you want to send your request}},
