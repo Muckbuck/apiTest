@@ -7,7 +7,7 @@ var http = require('http');
 var https = require('https');
 var fs = require('fs');
 
-db.connect('mongodb://admin:admin123@ds139277.mlab.com:39277/webapp');
+db.connect('mongodb://username:password@ds139277.mlab.com:39277/webapp');
 app.set('view engine', 'ejs')// sets the view engine
 
 app.use(Facebook.middleware({ appId: config.fbOptions.appId, secret: config.fbOptions.appSecret }));
