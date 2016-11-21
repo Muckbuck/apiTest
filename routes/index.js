@@ -1,18 +1,13 @@
-//var facebook = require('./fbPosts');
-
-
 
 module.exports = function(app){
-    
+    function test(){
+       this.name = 'function';
+    }
     app.get('/', function(req,res){
-        /**
-        facebook(function(data){
-            console.log(data);
-        });
-        */
 
         res.render('index');
-
+        
+        console.log(test.prototype.name)
     });
     
 }
