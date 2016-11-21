@@ -1,19 +1,7 @@
 # README #
 
 Version 0.0.1 of the Grandisa webapp/mashup
-### Stuff that's important to learn ###
 
-* Routes
-* First class objects, Link: http://stackoverflow.com/questions/705173/what-is-meant-by-first-class-object
-* Basics of the EJS view engine
-* Will probably add more...
-
-### DB ###
-
-* link to mlabs: https://mlab.com/home
-* username: grandiosaBackend
-* password: pizzaBackEnd347
-* Registered with: grandiosaBackend@gmail.com
 
 ### How do I get set up? ###
 
