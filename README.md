@@ -1,6 +1,6 @@
 # README #
 
-Version 0.0.1 of the Grandisa webapp/mashup
+Version 0.0.1 
 
 
 ### How do I get set up? ###
